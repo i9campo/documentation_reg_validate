@@ -10,7 +10,7 @@ Que estão classificados em:
 - **InputReg**    : Campo de registros, seu type pode ser cpf ou cnpj. 
 
 #### Como funciona a estrutura. 
-[![N|Solid](https://kenzie.com.br/blog/wp-content/uploads/2021/01/o-que-e-redux-1.png)](https://nodesource.com/products/nsolid)
+[![N|Solid](https://kenzie.com.br/blog/wp-content/uploads/2021/01/o-que-e-redux-1.png)](https://kenzie.com.br/blog/o-que-e-redux/)
 Imagem retirada do site: ( https://kenzie.com.br/blog/o-que-e-redux/ ).
 
 Seguindo essa estrutura será possivel utilizar todos os **Inputs** ligado ao botão, assim validando os formulários da página. 
