@@ -81,3 +81,115 @@ Caso todas as condições seja verdadeiras será feita a ultima condição, que 
 ```s
 if ( props.setClick.CLICK === true && props.setClick.REQUIRED === false )
 ```
+
+
+
+
+# Configuração e instalação.  
+
+### Install
+```sh
+$ npm i reg_validate
+``` 
+### Import
+```sh
+$ import { Input, InputNumb, InputNumbComp, Button }  from 'reg_validate'
+``` 
+
+### Exemplo da ```<Tag>``` Button.
+```sh
+<Button color="primary" form={this._formValidate}  value="Confirmar"/>  
+```
+### Exemplo do ```Método``` _formValidate utilizado na ```<tag>``` Button  .
+```sh
+  _formValidate (e)  { 
+    // Condição para verificar sé todos os campos obrigatórios foram preenchidos corretamente.  
+    if (e === true){ 
+       // Condição para validação...      
+    } 
+  }
+```
+
+#### Propriedades do Button.
+| Propriedade | Ação | Tipo |
+| ------ | ------ | ------ |
+| color | Define a cor do botão, por padrão segue a mesma do reactstrap ou bootstrap. | String
+| form  | Recebe um método para validar os inputs, assim como a Tag Form do HTML. | String
+| value | Define o nome do Button. | String 
+
+Acesse [Reactstrap](https://reactstrap.github.io/components/buttons/) para obter mais informações sobre o color.
+
+### Exemplo da ```<Tag>``` Input.
+```sh
+<Input name="ex" req={true} type="text" updateValue={ this.funct } value={ var }/>
+```
+#### Propriedades do Input.
+| Propriedade | Ação | Tipo |
+| ------ | ------ | ------ |
+| disabled      | Ativa ou desativa o campo.           | Bool
+| name          | Define o ID do campo para validação. | String
+| max           | Define o tamanho máximo do campo                      | String 
+| req           | Define o campo como campo obrigatório ou não          | Bool 
+| row           | Define o tamanho do campo caso o tipo seja "textarea" | String
+| type          | Define o tipo do campo como: "date","textarea"        | String
+| label         | Exibe uma label ao lado do campo Input                | String
+| size          | Define o tamanho do campo Input                       | Int
+| updateValue   | Recebe um método para fazer a alteração do value do campo | Function
+| value | Exibe o valor digitado pelo usuário. | Function
+
+As ```propriedades``` disabled e req por padrão elas são **false**.  
+Já as ```propriedades``` row, label e size por padrão são **nulas**. 
+#### Exemplo da ```Propriedade``` label e size.
+```sh
+<Input name="ex" req={true} type="text" updateValue={ this.funct } value={ var } label="Tamanho" size={100}/>
+```
+#### Exemplo da ```Propriedade``` row.
+```sh
+<Input name="ex" req={true} type="text" updateValue={ this.funct } value={ var } row={20}/>
+```
+
+### Exemplo da ```<Tag>``` InputNumb.
+```sh
+<InputNumb name="ex" max="9" min="0" req={ true } updateValue={this.funct} value={ var }/>
+```
+#### Propriedades do InputNumb.
+| Propriedade | Ação | Tipo |
+| ------ | ------ | ------ |
+| disabled      | Ativa ou desativa o campo.           | Bool
+| name          | Define o ID do campo para validação. | String
+| max           | Define o valor máximo do campo. | String 
+| min           | Define o valor mínimo do campo podendo ser negativo. | String
+| req           | Define o campo como campo obrigatório ou não  | Bool 
+| type          | Define o tipo do campo, somente aceito o nome "decimal" | String
+| updateValue   | Recebe um método para fazer a alteração do value do campo | Function
+| value | Exibe o valor digitado pelo usuário. | Function
+
+### Exemplo da ```<Tag>``` InputCont ("Utilizado para validar contato.").
+```sh
+<InputCont name="fone" tpContato="cel" value={ var } updateValue={this._updateValue}/>
+```
+#### Propriedades do InputCont.
+| Propriedade | Ação | Tipo |
+| ------ | ------ | ------ |
+| disabled      | Ativa ou desativa o campo.           | Bool
+| name          | Define o ID do campo para validação. | String
+| tpContato     | Define o tipo de contato entre "cel" ou "tel" | String 
+| req           | Define o campo como campo obrigatório ou não  | Bool 
+| updateValue   | Recebe um método para fazer a alteração do value do campo | Function
+| value | Exibe o valor digitado pelo usuário. | Function
+
+### Exemplo da ```<Tag>``` InputReg ("Utilizado para validar Registros CPF ou CNPJ.").
+```sh
+<InputCont name="fone" tpContato="cel" value={ var } updateValue={this._updateValue}/>
+```
+#### Propriedades do InputCont.
+| Propriedade | Ação | Tipo |
+| ------ | ------ | ------ |
+| name          | Define o ID do campo para validação. | String
+| registro      | Define o tipo de registro como "CPF" ou "CNPJ" | String 
+| req           | Define o campo como campo obrigatório ou não  | Bool 
+| updateValue   | Recebe um método para fazer a alteração do value do campo | Function
+| value | Exibe o valor digitado pelo usuário. | Function
+
+
+
